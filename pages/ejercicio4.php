@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 4 – Costo de Viaje</title>
+  <link rel="stylesheet" href="../css/ejercicio4.css">
+</head>
+<body>
+  <img style="width:100px;height:100px;margin-left:10px;margin-top:10px;box-shadow:0 0 25px blue;" class="logo" src="../img/ChatGPT Image 6 sept 2025, 05_28_28 p.m..png" alt="">
+<a style="margin-top:120px;
+   position: absolute;
+  top: 0;
+  left:01;" href="../index.php">volver a pagina principal</a>  
+ <img style="width:100px;height:100px;margin-top:10px;margin-right:10px;box-shadow:0 0 15px blue;"
+  class="logo2" src="../img/TIGRILLO_LOAD_3.gif" alt="">
+  <h1>Ejercicio 4 – Costo de Viaje por Autobuses</h1>
+<center>  <p>Ingrese tipo de autobús (A, B o C), distancia (km) y cantidad de personas:</p>
+  <input type="text" id="tipoBus" placeholder="Tipo A/B/C" maxlength="1">
+  <input type="number" id="distancia" placeholder="Distancia (km)">
+  <input type="number" id="personas" placeholder="Cantidad de personas">
+  <button id="btnCalcular">Calcular Costo</button></center>
+
+  <h2>Pseudocódigo</h2>
+  <pre id="pseudocodigoBus" style="background-color:#eee;padding:10px;"></pre>
+  <div id="resultadoBus"></div>
+
+  <h2>WHILE en JS</h2>
+  <div id="seccionWhileBus">
+    <pre id="explicacionWhileBus" style="background-color:#eee;padding:10px;"></pre>
+    <div id="resultadoWhileBus"></div>
+  </div>
+
+  <h2>FOR en JS</h2>
+  <div id="seccionForBus">
+    <pre id="explicacionForBus" style="background-color:#eee;padding:10px;"></pre>
+    <div id="resultadoForBus"></div>
+  </div>
+
+  <h2>Tabla de Prueba de Escritorio</h2>
+  <table border="1">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Tipo Bus</th>
+        <th>Distancia</th>
+        <th>Personas</th>
+        <th>Costo Total</th>
+        <th>Costo por Persona</th>
+      </tr>
+    </thead>
+    <tbody id="cuerpoTablaBus"></tbody>
+  </table>
+
+  <script src="../js/ejercicio4.js"></script>
+</body>
+</html>
