@@ -1,0 +1,514 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+</head>
+<body>
+<script>
+const texto = "Hola soy Mark1 punto 0 Mi creador es el estudiante Colon Vargas perteneciente a la Universidad Estatal de Milagro UNEMI . yo te guiare por todos los ejercicios que se realizaron con el lenguaje de programacion javascript, por medio de las estructuras de control de flujo while y for.";
+
+function hablar() {
+    const utter = new SpeechSynthesisUtterance(texto);
+    const voces = speechSynthesis.getVoices();
+    let vozHombre = voces.find(v => v.lang.startsWith("es") && v.name.toLowerCase().includes("male"));
+    if (!vozHombre) vozHombre = voces.find(v => v.lang.startsWith("es"));
+    if (vozHombre) utter.voice = vozHombre;
+
+    utter.pitch = -10;
+    utter.rate = 1.0;
+    speechSynthesis.speak(utter);
+}
+
+// Detectar si es móvil
+function esMovil() {
+  return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+}
+
+// Lógica: PC auto, celular necesita toque
+if (esMovil()) {
+    // Celular: esperar toque
+    function iniciar() {
+        hablar();
+        document.removeEventListener('touchstart', iniciar);
+    }
+    document.addEventListener('touchstart', iniciar);
+} else {
+    // PC: reproducir automáticamente
+    window.addEventListener('load', hablar);
+}
+</script>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TECNICA DE PROGRAMACION</title>
+<style>
+/* Overlay que bloquea todo en móviles */
+#bloqueoMovil {
+  display: none; /* oculto por defecto */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.85);
+  z-index: 9999;
+  text-align: center;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+/* Mensaje centrado */
+#bloqueoMovil .mensaje {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 40px;
+  padding: 30px;
+  background-color: rgba(0,0,0,0.7);
+  border-radius: 20px;
+}
+</style>
+
+</head>
+<body>
+
+<!-- Overlay de bloqueo -->
+<div id="bloqueoMovil">
+  <div class="mensaje">
+    Por favor, active el <strong>modo ordenador</strong> para visualizar esta página.
+  </div>
+</div>
+
+<!-- Contenido principal -->
+<div id="contenido">
+  
+</div>
+
+<script>
+// Detectar si es móvil
+function esMovil() {
+  return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+}
+
+// Mostrar overlay en móviles
+if (esMovil()) {
+  document.getElementById('bloqueoMovil').style.display = 'block';
+  document.getElementById('contenido').style.display = 'none';
+} else {
+  document.getElementById('bloqueoMovil').style.display = 'none';
+  document.getElementById('contenido').style.display = 'block';
+}
+</script>
+
+</body>
+</html>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+    @media only screen and (max-width:3480px) {
+        .body{
+
+width: 3480px;
+        }
+    }  
+</style>
+
+    <style>
+.titulo{
+        color: rgb(0, 0, 0);
+        box-shadow: 0 0  10px rgba(47, 0, 255, 1);
+        background-color:rgba(255, 255, 255, 0.788);
+        margin-left:200px;margin-right:200px;  
+    }
+</style>
+
+<style>
+
+    .contenedor a {
+      border: 3px solid rgba(76, 0, 255, 1);
+      border-radius: 12px;
+      font-size: 40px;
+      color: blue;
+      font-family:'cursiva';
+      text-decoration: none;
+      box-shadow: 0 0 5px rgba(38, 0, 255, 1);
+     display: inline-block;
+     height: 211px;
+     width: 380px;
+    }
+  </style>
+  <style>
+/* Contenido principal de la página */
+#contenido {
+  display: block; /* visible por defecto */
+}
+
+/* Overlay que bloquea todo en móviles */
+#bloqueoMovil {
+  display: none; /* oculto por defecto */
+  position: fixed;
+  top: 0;
+
+
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  z-index: 9999;
+}
+
+</style>
+<style>
+  .logo{
+  position: absolute;
+  top: 0;
+  left: 0;
+  
+}
+.logo2{
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+  
+</style>
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Botón para mostrar/ocultar */
+#menu-btn {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  background-color:  rgba(255, 255, 255, 0.55);
+  color: black;
+  
+  padding: 10px 15px;
+  cursor: pointer;
+  z-index: 1001;
+  font-size: 12px;
+  width :112px
+}
+
+/* Menú lateral */
+nav {
+  width: 104px;
+  background-color: rgba(255, 255, 255, 0.55);
+  height: 100vh;
+  position: fixed;
+  left: -200px; /* oculto al inicio */
+  top: 0;
+  padding-top: 20px;
+  transition: left 0.3s;
+  z-index: 1000;
+
+  /* Aquí agregamos el borde */
+  border: 4px solid blue; /* grosor, estilo y color */
+  border-radius: 12px; /* bordes redondeados opcionales */
+}
+
+/* Enlaces del menú */
+nav a {
+  color: black;
+  margin-top: 20px;
+  padding: 12px 20px;
+  text-decoration: none;
+  display: block;
+  background-color:  rgba(255, 255, 255, 0.55);
+  border: 0.5px solid blue;
+  border-radius: 12px;
+}
+
+nav a:hover {
+  background-color:  rgba(255, 255, 255, 0.55);
+}
+
+/* Contenido del desplegable */
+.dropdown-content {
+  display: none;
+  background-color: #444;
+}
+
+.dropdown-content a {
+  padding-left: 40px;
+}
+
+/* Mostrar desplegable al pasar el mouse */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Contenido principal */
+#main {
+  margin-left: 20px;
+  padding: 20px;
+  transition: margin-left 0.3s;
+}
+</style>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Contenido principal */
+#main {
+  padding: 20px;
+}
+
+/* Botón para abrir/cerrar */
+#toggle-btn {
+  position: fixed;
+  top: 10px;
+  right: 120px;
+  z-index: 1001;
+  padding: 10px 15px;
+  background-color: #333;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+/* Video emergente lateral */
+#video-popup {
+  position: fixed;
+  top: 50px;
+  right: -320px; /* oculto al inicio */
+  width: 300px;
+  height: 200px;
+  background-color: #111;
+  padding: 10px;
+  box-shadow: -3px 0 10px rgba(0,0,0,0.5);
+  transition: right 0.3s;
+  z-index: 1000;
+  border: 2px solid #0f0;
+}
+
+/* Video dentro del popup */
+#video-popup video, #video-popup audio {
+  width: 100%;
+  height: 100%;
+}
+</style>
+
+
+</head>
+<body style="background-color: hsla(0, 100%, 99%, 1.00);border: rgba(255, 102, 0, 0.55) solid 6px;box-shadow : 0 0 40px  rgba(255, 102, 0, 0.55); ">
+
+<button id="toggle-btn">🎬 ¿QUIEN ES MARK1.0?</button>
+
+<div id="video-popup">
+  <video  id="video" controls src="./video/Speaking_V1.mp4"></video>
+  <!-- Para audio reemplaza <video> por <audio> -->
+  <!-- <audio controls src="tu-audio.mp3"></audio> -->
+</div>
+
+<script>
+const toggleBtn = document.getElementById('toggle-btn');
+const videoPopup = document.getElementById('video-popup');
+
+let visible = false;
+
+toggleBtn.addEventListener('click', () => {
+  if(visible){
+    videoPopup.style.right = '-320px'; // oculta
+  } else {
+    videoPopup.style.right = '0';      // muestra
+  }
+  visible = !visible;
+});
+</script>
+
+
+
+<button style=" border: 2px solid rgba(0, 17, 255, 0.55);border-radius:12px;font-family:cursive;" id="menu-btn">☰ Menú</button>
+<nav id="sidebar">
+  <a style="font-family:cursive" href="#">mark1.0 by unemi students <p>Por Ahora no esta disponible </p></a>
+   <a href="#" id="darkModeBtn">🌙 Activar Dark Mode</a>
+</nav>
+ <script>
+let darkModeActivo = false;
+
+
+darkModeBtn.addEventListener("click", () => {
+  if (!darkModeActivo) {
+    document.body.classList.add("dark-mode");
+    darkModeBtn.textContent = "☀️ Desactivar Dark Mode";
+    darkModeActivo = true;
+  } else {
+    document.body.classList.remove("dark-mode");
+    darkModeBtn.textContent = "🌙 Activar Dark Mode";
+    darkModeActivo = false;
+  }
+});
+</script>
+
+<div id="main">
+  
+</div>
+
+<script>
+const menuBtn = document.getElementById('menu-btn');
+const sidebar = document.getElementById('sidebar');
+const main = document.getElementById('main');
+const darkModeBtn = document.getElementById("darkModeBtn");
+
+let menuVisible = false;
+
+menuBtn.addEventListener('click', () => {
+  if(menuVisible){
+    sidebar.style.left = '-200px'; // oculta
+    main.style.marginLeft = '20px';
+  } else {
+    sidebar.style.left = '0'; // muestra
+    main.style.marginLeft = '220px';
+  }
+  menuVisible = !menuVisible;
+});
+
+</script>
+
+  </div>
+
+  
+</nav>
+<center>
+    <img style="width:100px;height:100px;margin-left:10px;margin-top:10px;box-shadow:0 0 25px blue;" class="logo" src="./img/ChatGPT Image 6 sept 2025, 05_28_28 p.m..png" alt="">
+    <img style="width:100px;height:100px;margin-top:10px;margin-right:10px;box-shadow:0 0 15px blue;" class="logo2" src="./img/TIGRILLO_LOAD_3.gif" alt="">
+   <h1 class="titulo" style="border: 2px solid rgba(68, 0, 255, 1);font-size: 40px;font-family: cursiva ;width: 60%;box-shadow: 0 0  40px skyblue; ">
+        DEBER TECNICA DE PROGRAMACION COLON VARGAS </h1>
+    
+<p style="border: 2px solid rgba(17, 0, 255, 1);font-size: 40px;font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif ; 
+width: 60%;color: rgb(0, 0, 0);background-color:rgba(255, 255, 255, 0.79); 
+box-shadow: 0 0  40px skyblue;">
+    EJERCICIOS DEL 1 AL 30 </p>
+        
+       
+<center>
+
+
+  <div class="contenedor" style="font-size: 40px;
+        color: rgb(0, 0, 0);font-family:Georgia ;text-decoration: none;
+        " >
+   <p class="btn0"
+     style="border: 2px solid rgba(17, 0, 255, 1);
+            font-size: 40px;
+            font-family:'cursiva' ;
+            width: 60%;
+            color: blue;
+            background-color: orange;
+            box-shadow: 0 0 10px rgba(25, 0, 255, 1);
+            text-align:center;
+            ">
+    Bloque A
+  </p>
+
+
+  
+<div class="grid-ejercicios"  style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; justify-items: center; width: 780px;
+     background-color: orange;
+     border: solid orange 6px;
+     box-shadow:0 0 80px orange;
+      border-radius: 12px;">
+<a href="./pages/ejercicio1.php" class="btn1"><img style=" border-radius:12px;width:380px;height: 211px;"src="./img/Captura20250905171906.png" alt=""></a>
+    <a href="./pages/ejercicio2.php" class="btn2"><img style=" border-radius:12px;width:380px;height: 211px;" src="./img/Captura202509051719062.png" alt=""> </a>
+    <a href="./pages/ejercicio3.php" class="btn3"><img style=" border-radius:12px;width:380px;height: 211px;" src="./img/Captura20250905180804.png" alt=""> </a>
+    <a href="./pages/ejercicio4.php" class="btn4"><img style=" border-radius:12px;width:380px;height: 211px;" src="./img/Captura20250905181954.png" alt=""> </a>
+    <a href="./pages/ejercicio5.php" class="btn5"><img style=" border-radius:12px;width:380px;height: 211px;" src="./img/Captura20250905200748.png" alt=""> </a>
+    <a href="./pages/ejercicio6.php" class="btn6"><img style=" border-radius:12px;width:380px;height: 211px;" src="./img/Captura20250906135355.png" alt=""> </a>
+    <a href="./pages/ejercicio7.php" class="btn7"><img style=" border-radius:12px;width:380px;height: 211px;" src="./img/Captura20250906173302.png" alt=""> </a>
+    <a href="./pages/ejercicio8.php" class="btn8"><img style=" border-radius:12px;width:380px;height: 211px;" src="./img/Captura20250906173338.png" alt=""> </a>
+    <a href="./pages/ejercicio9.php" class="btn9"><img style=" border-radius:12px;width:380px;height: 211px;" src="./img/Captura20250906173404.png" alt=""> </a>
+    <a href="./pages/ejercicio10.php" class="btn10"><img style=" border-radius:12px;width:380px;height:211px;" src="./img/Captura20250906173530.png" alt=""> </a>
+    <a style="font-size:40px" href="./pages/ejercicio11.php" class="btn11"><img style=" border-radius:12px;width:300px;height:150px;" src="./img/Captura20250907122312.png" alt="">Bloque B </a>
+    <a style="font-size:40px" href="./pages/ejercicio12.php" class="btn12"><img style=" border-radius:12px;width:300px;height:150px;" src="./img/Captura20250907122314.png" alt="">Bloque B</a>
+    <a href="./pages/ejercicio13.php" class="btn13"><img style=" border-radius:12px;width:300px;height:75px;" src="./img/Captura20250907122315.png" alt="">Bloque B </a>
+    <a href="./pages/ejercicio14.php" class="btn14"><img style=" border-radius:12px;width:300px;height:75px;" src="./img/Captura20250907122503.png" alt="">Bloque B  </a>
+    <a href="./pages/ejercicio15.php" class="btn15"><img style=" border-radius:12px;width:300px;height:75px;" src="./img/Captura20250907122552.png" alt="">Bloque B  </a>
+    <a href="./pages/ejercicio16.php" class="btn16"><img style=" border-radius:12px;width:300px;height:75px;" src="./img/Captura20250907122613.png" alt="">Bloque B  </a>
+    <a href="./pages/ejercicio17.php" class="btn17"><img style=" border-radius:12px;width:300px;height:75px;" src="./img/Captura20250907122724.png" alt="">Bloque B  </a>
+    <a href="./pages/ejercicio18.php" class="btn18"><img style=" border-radius:12px;width:300px;height:75px;" src="./img/Captura20250907122740.png" alt="">Bloque B  </a>
+    <a href="./pages/ejercicio19.php" class="btn19"><img style=" border-radius:12px;width:300px;height:75px;" src="./img/Captura20250907122759.png" alt="">Bloque B  </a>
+    <a href="./pages/ejercicio20.php" class="btn20"><img style=" border-radius:12px;width:300px;height:75px;" src="./img/Captura20250907122836.png" alt="">Bloque B  </a>
+ <a href="./pages/ejercicio21.php" class="btn21" style="background-color: blue;color:orange;border:2px solid orange;"><img style="border-radius:12px;width:300px;height:150px;" src="./img/Captura202509061734389.png" alt="">Bloque C </a>
+<a href="./pages/ejercicio22.php" class="btn22" style="background-color: blue;color:orange;border:2px solid orange;"><img style="border-radius:12px;width:300px;height:150px;" src="./img/Captura20250907150325.png" alt="">Bloque C </a>
+<a href="./pages/ejercicio23.php" class="btn23" style="background-color: blue;color:orange;border:2px solid orange;"><img style="border-radius:12px;width:300px;height:150px;" src="./img/Captura20250907150343.png" alt="">Bloque C</a>
+<a href="./pages/ejercicio24.php" class="btn24" style="background-color: blue;color:orange;border:2px solid orange;"><img style="border-radius:12px;width:300px;height:150px;" src="./img/Captura20250907150407.png" alt="">Bloque C</a>
+<a href="./pages/ejercicio25.php" class="btn25" style="background-color: blue;color:orange;border:2px solid orange;"><img style="border-radius:12px;width:300px;height:150px;" src="./img/Captura20250907150512.png" alt="">Bloque C</a>
+<a href="./pages/ejercicio26.php" class="btn26" style="background-color: blue;color:orange;border:2px solid orange;"><img style="border-radius:12px;width:300px;height:150px;" src="./img/Captura20250907150534.png" alt="">Bloque C</a>
+<a href="./pages/ejercicio27.php" class="btn27" style="background-color: blue;color:orange;border:2px solid orange;"><img style="border-radius:12px;width:300px;height:150px;" src="./img/Captura20250907150548.png" alt="">Bloque C</a>
+<a href="./pages/ejercicio28.php" class="btn28" style="background-color: blue;color:orange;border:2px solid orange;"><img style="border-radius:12px;width:300px;height:150px;" src="./img/Captura20250907150609.png" alt="">Bloque C</a>
+<a href="./pages/ejercicio29.php" class="btn29" style="background-color: blue;color:orange;border:2px solid orange;"><img style="border-radius:12px;width:300px;height:150px;" src="./img/Captura20250907150620.png" alt="">Bloque C</a>
+<a href="./pages/ejercicio30.php" class="btn30" style="background-color: blue;color:orange;border:2px solid orange;"><img style="border-radius:12px;width:300px;height:150px;" src="./img/Captura20250907150629.png" alt="">Bloque C</a>
+</div>
+
+
+
+  </div>
+
+ </div></center>  
+
+<style>
+/* Dark Mode general */
+.dark-mode {
+  background-color: #121212 !important;
+  color: white !important;
+}
+
+/* Fondo del menú en Dark Mode */
+.dark-mode nav {
+  background-color: rgba(30,30,30,0.95) !important;
+}
+
+/* Links del menú */
+.dark-mode nav a {
+  color: white !important;
+  border-color: rgba(0, 0, 255, 0.55) !important; /* casi igual al azul que ya usas */
+}
+
+/* Bordes generales (mantienen tonos similares) */
+
+
+.dark-mode a {
+  border-color: rgba(68, 0, 255, 0.8) !important; /* mantiene azul fuerte */
+  background-color: rgba(255, 255, 255, 0.1) !important; /* leve contraste */
+}
+.dark-mode .btn21 
+.dark-mode .btn22,
+.dark-mode .btn23,
+.dark-mode .btn24,
+.dark-mode .btn25,
+.dark-mode .btn26,
+.dark-mode .btn27,
+.dark-mode .btn28,
+.dark-mode .btn29,
+.dark-mode .btn30 {
+  color: orange !important;
+  border-color: orange !important; /* borde casi igual al azul que ya usas */
+  background-color: blue !important; /* leve contraste */
+}
+
+</style>
+<center style="margin-top:50px;border:2px solid red;border-radius:12px;width:800px;background-color:red;">Advertensia:"¡⚠️A partir del bloque B NO funciona la voz de MARK1.0⚠️  gracias por su comprension!"</center>
+
+<center style="margin-top:200px;border:2px solid lightsalmon;background-color:lightsalmon;">created by colon vargas</center>
+
+ </body>
+</html>

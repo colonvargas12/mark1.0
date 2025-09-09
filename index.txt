@@ -1,0 +1,229 @@
+//TAREA 1
+Objetivo
+Reforzar el uso de estructuras condicionales para tomar decisiones.
+Practicar la aplicación de ciclos para resolver varios casos en una sola ejecución.
+Aprender a diferenciar entre resolver un caso aislado y resolver una colección de casos.
+Introducir el uso de arreglos para almacenar y procesar múltiples datos de manera más eficiente.
+
+🔹 Bloque A – Ejercicios con Condicionales
+1. Número positivo o negativo
+Qué hacer: Leer un número y mostrar si es positivo o negativo.
+Ejemplo:
+Entrada: -5
+Salida: "El número -5 es negativo."
+
+2. Costo de lápices
+Qué hacer: Leer cuántos lápices compra un cliente y calcular el costo.
+≥1000 lápices → $0,85 cada uno.
+Menos de 1000 → $0,90 cada uno.
+Ejemplo:
+Entrada: 1200
+Salida: "Total a pagar: $1020.00"
+
+3. Descuento en trajes
+Qué hacer: Leer el precio de un traje y aplicar descuento.
+$2500 → 15%
+≤$2500 → 8%
+Ejemplo:
+Entrada: 3000
+Salida: "Precio final: $2550.00"
+
+4. Costo de viaje por autobuses
+Qué hacer: Leer tipo de autobús (A, B o C), distancia y cantidad de personas.
+Tipo A: $2.0/km/persona
+Tipo B: $2.5/km/persona
+Tipo C: $3.0/km/persona
+Si hay menos de 20 personas, cobrar como si fueran 20.
+Ejemplo:
+Entrada: Autobús A, 100 km, 15 personas.
+Salida: "Costo total: $4000.00 – Costo por persona: $266.67"
+
+5. Consultorio médico – costo de citas
+Qué hacer: Leer el número de la cita y calcular su costo y el acumulado.
+1 a 3 → $200
+4 a 5 → $150
+6 a 8 → $100
+9 en adelante → $50
+Ejemplo:
+Entrada: cita 5
+Salida: "Costo cita 5: $150 – Acumulado: $900"
+
+6. Fábrica El Cometa – precio de venta
+Qué hacer: Calcular el costo de producción y el precio de venta según clave (1–6).
+Ejemplo (clave 3, materia prima $1000):
+Mano de obra = 75% de MP = $750
+Gastos de fabricación = 35% de MP = $350
+Costo producción = $2100
+Precio de venta = $3045
+
+7. Banco XYZ – aumento de crédito
+Qué hacer: Leer tipo de tarjeta y calcular el nuevo límite de crédito.
+Tipo 1 → 25%
+Tipo 2 → 35%
+Tipo 3 → 40%
+Otro → 50%
+Ejemplo:
+Entrada: crédito $1000, tipo 2
+Salida: "Nuevo crédito: $1350"
+
+8. Paquetería internacional – costo de envío
+Qué hacer: Calcular costo según peso y zona.
+Restricción: peso ≤ 5 kg.
+Ejemplo:
+Entrada: peso 4 kg, destino Europa
+Salida: "Costo envío: $240"
+
+9. Clasificación de edades
+Qué hacer: Leer una edad y clasificar.
+1–3 → Infante
+4–13 → Niño
+14–17 → Adolescente
+18–35 → Joven
+36–64 → Adulto
+65+ → Adulto mayor
+Ejemplo:
+Entrada: 70
+Salida: "Adulto mayor"
+
+10. Número equivalente a días de la semana
+Qué hacer: Leer un número y mostrar el día de la semana.
+Ejemplo:
+Entrada: 3
+Salida: "Miércoles"
+
+🔹 Bloque B – Ejercicios con Ciclos
+En este bloque, cada ejercicio se adapta para procesar N casos en lugar de uno solo.
+
+1. N números positivos o negativos
+Leer N números y mostrar para cada uno si es positivo o negativo.
+Ejemplo:
+Entrada: 5 → [4, -2, 0, 7, -9]
+Salida:
+4 es positivo
+-2 es negativo
+0 es neutro
+7 es positivo
+-9 es negativo
+
+2. N compras de lápices
+Leer la cantidad de lápices en N pedidos y calcular el costo total en cada caso.
+Ejemplo:
+Entrada: N=2 → [1200, 800]
+Salida:
+Pedido 1: $1020
+Pedido 2: $720
+
+3. N compras de trajes
+Procesar el precio de N trajes y calcular el descuento en cada uno.
+
+4. N viajes en autobús
+Calcular el costo de N viajes, pidiendo datos de cada viaje.
+
+5. N pacientes en consultorio
+Procesar el costo de la cita y acumulado para N pacientes, según el número de cita de cada uno.
+
+6. N artículos de la Fábrica El Cometa
+Procesar N artículos y calcular precio de venta para cada uno.
+
+7. N clientes del Banco XYZ
+Leer datos de N clientes (tipo de tarjeta y crédito actual) y mostrar su nuevo límite.
+
+8. N paquetes en paquetería
+Calcular el costo de envío para N paquetes, validando que no excedan 5 kg.
+
+9. N personas con clasificación de edades
+Leer edades de N personas y mostrar su categoría.
+
+10. N números → días de la semana
+Leer N números y mostrar el día correspondiente para cada uno.
+Bloque C – Ejercicios con Arreglos
+En este bloque, cada ejercicio se adapta para resolver el problema cargando los datos en un arreglo (lista) y procesándolos con un ciclo.
+
+Clasificación de números en un arreglo
+Qué hacer: Dado un arreglo con N números, mostrar para cada uno si es positivo, negativo o neutro.
+Ejemplo:
+Entrada: [4, -2, 0, 7, -9]
+Salida:
+4 es positivo
+-2 es negativo
+0 es neutro
+7 es positivo
+-9 es negativo
+
+Costo de pedidos de lápices en arreglo
+Qué hacer: Dado un arreglo con la cantidad de lápices de varios pedidos, calcular el costo total de cada uno.
+Ejemplo:
+Entrada: [1200, 800]
+Salida:
+Pedido 1: $1020
+Pedido 2: $720
+
+Precios de trajes en arreglo
+Qué hacer: Dado un arreglo con los precios de N trajes, calcular el precio final aplicando el descuento correspondiente.
+Ejemplo:
+Entrada: [3000, 2000]
+Salida:
+Traje 1: $2550
+Traje 2: $1840
+
+Datos de viajes en arreglo
+Qué hacer: Guardar en un arreglo los viajes (tipo autobús, km, personas) y calcular el costo total y por persona de cada viaje.
+Ejemplo:
+Entrada: [("A", 100, 15), ("C", 50, 30)]
+Salida:
+Viaje 1: Costo total $4000 – Costo por persona $266.67
+Viaje 2: Costo total $4500 – Costo por persona $150
+
+Citas médicas en arreglo
+Qué hacer: Guardar en un arreglo los números de cita de varios pacientes y calcular el costo y acumulado de cada una.
+Ejemplo:
+Entrada: [1, 5, 9]
+Salida:
+Cita 1: $200 – Acumulado: $200
+Cita 5: $150 – Acumulado: $900
+Cita 9: $50 – Acumulado: $1300
+
+Artículos de la fábrica en arreglo
+Qué hacer: Dado un arreglo con tuplas (clave, materia prima), calcular el precio de venta de cada artículo.
+Ejemplo:
+Entrada: [(3, 1000), (1, 2000)]
+Salida:
+Artículo 1: PV = $3045
+Artículo 2: PV = $5000
+
+Clientes del banco en arreglo
+Qué hacer: Dado un arreglo con tuplas (tipo tarjeta, crédito actual), calcular el nuevo límite de crédito de cada cliente.
+Ejemplo:
+Entrada: [(2, 1000), (3, 1500)]
+Salida:
+Cliente 1: Nuevo crédito $1350
+Cliente 2: Nuevo crédito $2100
+
+Paquetes de paquetería en arreglo
+Qué hacer: Dado un arreglo con tuplas (peso, zona), calcular el costo de envío de cada paquete, siempre que el peso ≤ 5 kg.
+Ejemplo:
+Entrada: [(4, "Europa"), (6, "Asia")]
+Salida:
+Paquete 1: Costo envío $240
+Paquete 2: Error, excede 5 kg
+
+Clasificación de edades en arreglo
+Qué hacer: Dado un arreglo con las edades de varias personas, mostrar su categoría (Infante, Niño, Adolescente, Joven, Adulto, Adulto mayor).
+Ejemplo:
+Entrada: [3, 15, 70]
+Salida:
+3 → Infante
+15 → Adolescente
+70 → Adulto mayor
+
+Días de la semana en arreglo
+Qué hacer: Dado un arreglo con números (1–7), mostrar el día correspondiente de la semana.
+Ejemplo:
+Entrada: [1, 3, 7, 9]
+Salida:
+1 → Lunes
+3 → Miércoles
+7 → Domingo
+9 → Error
+
+//
