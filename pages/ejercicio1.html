@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 1 – Pseudocódigo y Explicación con Resultado</title>
+  <link rel="stylesheet" href="../css/ejercicio1.css">
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+</head>
+<body>
+     <img style="width:100px;height:100px;margin-left:10px;margin-top:10px;box-shadow:0 0 25px blue;" class="logo" src="../img/ChatGPT Image 6 sept 2025, 05_28_28 p.m..png" alt="">
+    <img style="width:100px;height:100px;margin-top:10px;margin-right:10px;box-shadow:0 0 15px blue;" class="logo2" src="../img/TIGRILLO_LOAD_3.gif" alt="">
+    <a href="../index.php"  style="display:inline-block; margin-top:100px;">
+  volver a pagina principal
+</a>
+
+  <center><h1>Ejercicio 1 – Pseudocódigo y Explicación paso a paso</h1></center>
+  <center><p style="width: 200px;">🔹 Bloque A – Ejercicios con Condicionales
+  1. Número positivo o negativo
+  Qué hacer: Leer un número y mostrar si es positivo o negativo.
+  Ejemplo:
+  Entrada: -5
+  Salida: "El número -5 es negativo."</p></center>
+
+  <div class="entrada">
+    <label for="dato">Ingresa un número:</label>
+    <input type="number" id="dato">
+    <button onclick="iniciarExplicacion()">Explicar</button>
+  </div>
+
+  <div id="mensajeEnunciado" class="mensaje" style="display:none;">
+    Enunciado: leer un numero y mostrar si es postivo o negativo
+  </div>
+
+  <div id="mensajeIntro" class="mensaje" style="display:none;">
+    Te voy a explicar el ejercicio paso a paso para que lo entiendas.
+  </div>
+
+ <div class="contenedor-columnas">
+    <div class="columna" id="seccionPseudocodigo" style="display:none;">
+      <div class="tituloSeccion">Pseudocódigo / Boceto</div>
+      <pre id="pseudocodigo"></pre>
+      <div id="resultadoPseudocodigo" class="mensaje"></div>
+          </div>
+
+    <div class="columna">
+      <div class="tituloSeccion">Explicación While</div>
+      <pre id="explicacionWhile"></pre>
+      <div id="resultadoWhile" class="mensaje" style="margin-top:10px;"></div>
+    </div>
+
+    <div class="columna" id="seccionFor" style="display:none;">
+      <div class="tituloSeccion">Explicación For</div>
+      <pre id="explicacionFor"></pre>
+      <div id="resultadoFor" class="mensaje" style="margin-top:10px;"></div>
+    </div>
+
+<div id="seccionTabla" style="display:block; margin-top:20px;">
+  <div class="tituloSeccion">Prueba de escritorio</div>
+  <table border="1">
+    <thead>
+      <tr>
+        <th>Iteración</th>
+        <th>Índice</th>
+        <th>Valor</th>
+        <th>Condición</th>
+        <th>Resultado</th>
+      </tr>
+    </thead>
+    <tbody id="cuerpoTabla"></tbody>
+  </table>
+</div>
+
+
+  </div>
+<center><p>las respuestas son generadas por mark1.0</p></center></center>
+ 
+  <script src="../js/ejercicio1.js"></script>
+</body>
+</html>
