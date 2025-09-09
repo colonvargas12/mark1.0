@@ -1,0 +1,77 @@
+/* Paleta UNEMI */
+:root {
+  --unemi-blue: #003399;   /* Azul institucional */
+  --unemi-orange: #FF6600; /* Naranja institucional */
+  --unemi-light-blue: #CCE0FF;
+  --unemi-light-orange: #FFE5CC;
+}
+
+/* Estilos generales */
+body {
+  font-family: 'cursiva';
+  background-color: var(--unemi-light-blue);
+  color: var(--unemi-blue);
+  margin: 20px;
+
+}
+
+/* Encabezados */
+h1, h2, h3 {
+  color: var(--unemi-blue);
+}
+
+/* Botones */
+button {
+  background-color: var(--unemi-orange);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background-color: #e65c00; /* tono más oscuro al pasar el mouse */
+}
+
+/* Inputs */
+input[type="number"], input[type="text"] {
+  padding: 8px;
+  border: 2px solid var(--unemi-blue);
+  border-radius: 5px;
+  font-size: 16px;
+  width: 200px;
+}
+
+/* Mensajes o tarjetas */
+.mensaje {
+  background-color: var(--unemi-light-orange);
+  color: var(--unemi-blue);
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+/* Columnas */
+.columna {
+  background-color: white;
+  border-left: 5px solid var(--unemi-orange);
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.2);
+}
+
+  .logo{
+  position: absolute;
+  top: 0;
+  left: 0;
+  
+}
+.logo2{
+  position: absolute;
+  top: 0;
+  right: 0;
+}

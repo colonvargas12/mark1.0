@@ -1,0 +1,134 @@
+/* ===== Paleta UNEMI ===== */
+:root {
+  --unemi-blue: #003399;         /* Azul institucional */
+  --unemi-orange: #FF6600;       /* Naranja institucional */
+  --unemi-light-blue: #CCE0FF;   /* Fondo azul claro */
+  --unemi-light-orange: #FFE5CC; /* Fondo naranja claro */
+  --unemi-white: #FFFFFF;         /* Blanco para tarjetas y tablas */
+}
+
+/* ===== Estilos generales ===== */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: var(--unemi-light-blue);
+  color: var(--unemi-blue);
+  margin: 20px;
+}
+
+h1, h2, h3 {
+  color: var(--unemi-blue);
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+/* ===== Botones ===== */
+button {
+  background-color: var(--unemi-orange);
+  color: var(--unemi-white);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s, transform 0.2s;
+}
+
+button:hover {
+  background-color: #e65c00; /* tono más oscuro */
+  transform: scale(1.05);
+}
+
+/* ===== Inputs ===== */
+input[type="number"], input[type="text"], select {
+  padding: 8px 10px;
+  border: 2px solid var(--unemi-blue);
+  border-radius: 5px;
+  font-size: 16px;
+  width: 200px;
+  margin-right: 10px;
+}
+
+/* ===== Mensajes / Tarjetas ===== */
+.mensaje {
+  background-color: var(--unemi-light-orange);
+  color: var(--unemi-blue);
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  font-weight: bold;
+  box-shadow: 0 0 5px rgba(0,0,0,0.2);
+}
+
+/* ===== Columnas ===== */
+.columna {
+  background-color: var(--unemi-white);
+  border-left: 5px solid var(--unemi-orange);
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.2);
+  margin-bottom: 20px;
+}
+
+/* ===== Contenedor de columnas ===== */
+.contenedor-columnas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+/* ===== Tablas ===== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+th, td {
+  border: 1px solid var(--unemi-blue);
+  padding: 8px;
+  text-align: center;
+  font-weight: bold;
+}
+
+th {
+  background-color: var(--unemi-orange);
+  color: var(--unemi-white);
+}
+
+tbody tr:nth-child(even) {
+  background-color: var(--unemi-light-blue);
+}
+
+/* ===== Logos ===== */
+.logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: 100px;
+  box-shadow: 0 0 25px var(--unemi-blue);
+}
+
+.logo2 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100px;
+  height: 100px;
+  box-shadow: 0 0 15px var(--unemi-blue);
+}
+
+/* ===== Estilos adicionales ===== */
+.center {
+  text-align: center;
+  margin-top: 10px;
+}
+
+pre {
+  background-color: var(--unemi-light-blue);
+  padding: 10px;
+  border-radius: 8px;
+  overflow-x: auto;
+}
+
