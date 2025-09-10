@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TECNICA DE PROGRAMACION</title>
-  <style>
-/* Ajustes responsivos generales */
+ <style>
+/* Ajustes generales */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -14,12 +14,13 @@ body {
   box-shadow: 0 0 40px rgba(255, 102, 0, 0.55);
 }
 
-.titulo{
+.titulo {
   color: rgb(0, 0, 0);
   box-shadow: 0 0  10px rgba(47, 0, 255, 1);
-  background-color:rgba(255, 255, 255, 0.788);
+  background-color: rgba(255, 255, 255, 0.788);
 }
 
+/* Contenedor de enlaces */
 .contenedor a {
   border: 3px solid rgba(76, 0, 255, 1);
   border-radius: 12px;
@@ -31,18 +32,18 @@ body {
   display: inline-block;
 }
 
-.logo{
+.logo {
   position: absolute;
   top: 0;
   left: 0;
 }
-.logo2{
+.logo2 {
   position: absolute;
   top: 0;
   right: 0;
 }
 
-/* Menú */
+/* Botón menú */
 #menu-btn {
   position: fixed;
   top: 0px;
@@ -53,9 +54,10 @@ body {
   cursor: pointer;
   z-index: 1001;
   font-size: 12px;
-  width :112px
+  width: 112px;
 }
 
+/* Menú lateral */
 nav {
   width: 104px;
   background-color: rgba(255, 255, 255, 0.55);
@@ -69,7 +71,6 @@ nav {
   border: 4px solid blue;
   border-radius: 12px;
 }
-
 nav a {
   color: black;
   margin-top: 20px;
@@ -80,12 +81,11 @@ nav a {
   border: 0.5px solid blue;
   border-radius: 12px;
 }
-
 nav a:hover {
   background-color: rgba(255, 255, 255, 0.55);
 }
 
-/* Video emergente */
+/* Botón video */
 #toggle-btn {
   position: fixed;
   top: 10px;
@@ -98,6 +98,7 @@ nav a:hover {
   cursor: pointer;
 }
 
+/* Video emergente */
 #video-popup {
   position: fixed;
   top: 50px;
@@ -147,7 +148,27 @@ nav a:hover {
   border-color: rgba(68, 0, 255, 0.8) !important;
   background-color: rgba(255, 255, 255, 0.1) !important;
 }
-  </style>
+
+/* --- Ajustes responsivos móviles --- */
+img {
+  max-width: 100% !important;
+  height: auto !important;
+}
+
+.titulo,
+.contenedor p,
+p {
+  width: 95% !important;
+  max-width: 100% !important;
+  font-size: clamp(18px, 5vw, 32px) !important; /* Texto se adapta */
+}
+
+a {
+  display: block !important;
+  text-align: center;
+}
+</style>
+
 </head>
 <body>
 
@@ -305,3 +326,4 @@ menuBtn.addEventListener('click', () => {
 
 </body>
 </html>
+
