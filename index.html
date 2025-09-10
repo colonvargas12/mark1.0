@@ -15,8 +15,8 @@ function hablar() {
     if (!vozHombre) vozHombre = voces.find(v => v.lang.startsWith("es"));
     if (vozHombre) utter.voice = vozHombre;
 
-    utter.pitch = -10;
-    utter.rate = 1.0;
+    utter.pitch = 1;
+    utter.rate = 1;
     speechSynthesis.speak(utter);
 }
 
@@ -512,3 +512,4 @@ box-shadow: 0 0  40px skyblue;">
 
  </body>
 </html>
+
