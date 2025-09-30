@@ -1,8 +1,8 @@
-<!DOCTYPE html> 
+
+<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="utf-8">
-  <meta name="google-site-verification" content="Rd1gENXuQZSqr28qb1f1exCkf-Gz9W7VhHLAb47JK14" />
 </head>
 <body>
 <script>
@@ -15,8 +15,8 @@ function hablar() {
     if (!vozHombre) vozHombre = voces.find(v => v.lang.startsWith("es"));
     if (vozHombre) utter.voice = vozHombre;
 
-    utter.pitch = 1;
-    utter.rate = 1;
+    utter.pitch = -10;
+    utter.rate = 1.0;
     speechSynthesis.speak(utter);
 }
 
@@ -188,7 +188,7 @@ width: 3480px;
 <style>
 body {
   margin: 0;
-  font-family:'cursiva';
+  font-family: Arial, sans-serif;
 }
 
 /* Botón para mostrar/ocultar */
@@ -341,7 +341,7 @@ toggleBtn.addEventListener('click', () => {
 <button style=" border: 2px solid rgba(0, 17, 255, 0.55);border-radius:12px;font-family:cursive;" id="menu-btn">☰ Menú</button>
 <nav id="sidebar">
   <a style="font-family:cursive" href="#">mark1.0 by unemi students <p>Por Ahora no esta disponible </p></a>
- <a style="font-family:cursive" href="../deber algoritmo 2025/arreglos_js/indexarreglos.html">mark1.0 by unemi students </a>
+    <a style="font-family:cursive" href="../deber algoritmo 2025/arreglos_js/indexarreglos.html">mark1.0 by unemi students </a>
    <a href="#" id="darkModeBtn">🌙 Activar Dark Mode</a>
 </nav>
  <script>
@@ -491,7 +491,7 @@ box-shadow: 0 0  40px skyblue;">
   border-color: rgba(68, 0, 255, 0.8) !important; /* mantiene azul fuerte */
   background-color: rgba(255, 255, 255, 0.1) !important; /* leve contraste */
 }
-.dark-mode .btn21, 
+.dark-mode .btn21 
 .dark-mode .btn22,
 .dark-mode .btn23,
 .dark-mode .btn24,
@@ -513,11 +513,3 @@ box-shadow: 0 0  40px skyblue;">
 
  </body>
 </html>
-
-
-
-
-
-
-
-
